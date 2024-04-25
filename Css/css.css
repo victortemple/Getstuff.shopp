@@ -1,0 +1,131 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: #000000;
+}
+
+::-webkit-scrollbar{
+    display: none;
+}
+
+img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+@media(max-width: 2560px){
+    .container{
+        width: 95vw;
+        padding: 0.8rem;
+        margin: auto;
+        display: flex;
+        gap: 5.4rem;
+    }
+
+    .leftMenu{
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        width: 25rem;
+    }
+
+    .search{
+        width: 100%;
+        height: 2.4rem;
+        padding: 1rem;
+        font-size: 1.6rem;
+        outline: none;
+        border: 2px solid #0000005d;
+        background: #0000005d;
+    }
+
+    .search::placeholder{
+        color: #27274a;
+        animation: hue 2s infinite linear;
+    }
+
+    @keyframes hue {
+        10%,40%{
+            filter: hue-rotate(360deg);
+        }
+        60%,100%{
+            filter: hue-rotate(40deg);
+        }
+    }
+
+    .search:focus{
+        transition: 0.5s;
+        border: 2px solid #0000008d;
+        background: #0000008d;
+        color: #eeeeee;
+    }
+
+    .cats{
+        display: flex;
+        flex-direction: column;
+        gap: 0.8rem;
+        margin-bottom: 1.4rem;
+    }
+
+    .cat{
+        font-size: 2.4rem;
+    }
+
+    .leftMenu h1{
+        font-size: 3.6rem;
+        text-transform: capitalize;
+    }
+
+    .priceBox h2{
+        font-size: 2rem;
+        text-transform: capitalize;
+    }
+
+    .priceBox{
+        display: flex;
+        flex-direction: column;
+        gap: 0.8rem;
+    }
+
+    .priceValue{
+        font-size: 1.8rem;
+        font-weight: 600;
+        margin-left: 1rem;
+    }
+
+    .products{
+        width: 90rem;
+        display: flex;
+        column-gap: 3.3rem;
+        flex-wrap: wrap;
+        row-gap: 2.4rem;
+        overflow: scroll;
+        height: 95svh;
+    }
+
+    .productImg{
+        width: 20rem;
+        height: 20rem;
+    }
+
+    .name{
+        font-size: 1.8rem;
+        letter-spacing: 1.5;
+        text-transform: capitalize;
+        font-weight: 500;
+    }
+
+    .priceTxt{
+        font-size: 2.4rem;
+        font-weight: 600;
+    }
+}
+
+@media(max-width:1550px){
+    html{
+        font-size: 52%;
+    }
+}
